@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<body>
+<h1>Details for desks</h1>
+<table>
+    <tr>
+        <th>Desk ID</th>
+        <th>Monitor ID</th>
+        <th>Manufacturer</th>
+        <th>Model</th>
+        <th>Size</th>
+        <th>Height Adjustable</th>
+    </tr>
+    <tr th:each="deskMonitor : ${deskMonitor}">
+        <td th:text="${deskMonitor.desk_id}"></td>
+        <td th:text="${deskMonitor.monitor_id}"></td>
+        <td th:text="${deskMonitor.manufacturer}"></td>
+        <td th:text="${deskMonitor.model}"></td>
+        <td th:text="${deskMonitor.size}"></td>
+        <td th:text="${deskMonitor.heightadjustable}"></td>
+    </tr>
+</table>
+</body>
+</html>

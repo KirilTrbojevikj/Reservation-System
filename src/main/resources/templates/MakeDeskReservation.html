@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Desk Reservation</title>
+</head>
+<body>
+<h1>Make a Desk Reservation</h1>
+<form method="post" action="/MakeDeskReservation">
+
+  <label for="deskReservationDate">Date:</label>
+  <input type="date" id="deskReservationDate" name="deskReservationDate" required><br><br>
+
+  <label for="deskReservationUsername">Username:</label>
+  <input type="text" id="deskReservationUsername" name="deskReservationUsername" required><br><br>
+
+  <label for="deskReservationDeskNumber">Desk Number:</label>
+  <input type="number" id="deskReservationDeskNumber" name="deskReservationDeskNumber" required><br><br>
+
+  <input type="submit" value="Reserve">
+</form>
+</body>
+</html>

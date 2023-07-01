@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<body>
+<h1>Details for parking </h1>
+<table>
+    <tr>
+        <th>Parking Spot ID</th>
+        <th>Width</th>
+        <th>Length</th>
+        <th>Parking Level ID</th>
+        <th>Parking Level</th>
+        <th>Building ID</th>
+        <th>Building Address</th>
+    </tr>
+    <tr th:each="parkingSpot : ${parkingSpotDetails}">
+        <td th:text="${parkingSpot.parking_id}"></td>
+        <td th:text="${parkingSpot.width}"></td>
+        <td th:text="${parkingSpot.length}"></td>
+        <td th:text="${parkingSpot.parking_level_id}"></td>
+        <td th:text="${parkingSpot.parking_level}"></td>
+        <td th:text="${parkingSpot.building_id}"></td>
+        <td th:text="${parkingSpot.building_address}"></td>
+    </tr>
+</table>
+</body>
+</html>

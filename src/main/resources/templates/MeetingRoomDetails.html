@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Details Meeting Rooms</title>
+</head>
+<body>
+<h1>Details for Meeting Rooms </h1>
+<table>
+  <tr>
+    <th>Meeting Room ID</th>
+    <th>Capacity</th>
+    <th>Floor ID</th>
+    <th>Floor Number</th>
+    <th>Building ID</th>
+    <th>Building Address</th>
+  </tr>
+  <tr th:each="meetingRoom : ${meetingRoomDetails}">
+    <td th:text="${meetingRoom.meeting_room_id}"></td>
+    <td th:text="${meetingRoom.capacity}"></td>
+    <td th:text="${meetingRoom.floor_id}"></td>
+    <td th:text="${meetingRoom.floor_number}"></td>
+    <td th:text="${meetingRoom.building_id}"></td>
+    <td th:text="${meetingRoom.building_address}"></td>
+  </tr>
+</table>
+</body>
+</html>

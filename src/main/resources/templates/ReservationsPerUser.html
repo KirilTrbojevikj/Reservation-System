@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<body>
+<h1>Reservations per User </h1>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>User ID</th>
+        <th>Total Reservations</th>
+
+    </tr>
+    <tr th:each="users : ${reservationsPerUser}">
+        <td th:text="${users.first_name}"></td>
+        <td th:text="${users.last_name}"></td>
+        <td th:text="${users.userid}"></td>
+        <td th:text="${users.total_reservations}"></td>
+    </tr>
+</table>
+</body>
+</html>

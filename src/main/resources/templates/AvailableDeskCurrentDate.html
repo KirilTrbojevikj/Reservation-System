@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Available desks for today</title>
+</head>
+<body>
+<h1>Available desks for today</h1>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Floor Map</th>
+    <th>Department</th>
+    <th>City</th>
+    <th>Address</th>
+    <th>Date</th>
+  </tr>
+  <tr th:each="desk : ${availableDesks}">
+    <td th:text="${desk.id}"></td>
+    <td th:text="${desk.floorMap}"></td>
+    <td th:text="${desk.department}"></td>
+    <td th:text="${desk.city}"></td>
+    <td th:text="${desk.address}"></td>
+    <td th:text="${desk.date}"></td>
+  </tr>
+</table>
+</body>
+</html>
