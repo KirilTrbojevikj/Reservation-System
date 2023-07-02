@@ -1,81 +1,116 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>Desk, Parking & Meeting Room Reservation App</title>
+    <meta charset="UTF-8">
+    <title>Desk, Parking & Meeting Room Reservation App</title>
 </head>
 <body>
 <h1>Welcome</h1>
 
 <div>
-  <button onclick="showUserOptions()">User</button>
-  <button onclick="showDeskOptions()">Desk reservation</button>
-  <button onclick="showParkingOptions()">Parking reservation</button>
-  <button onclick="showMeetingRoomOptions()">Meeting Room reservation</button>
+    <a href="/CreateUser">
+        <button>Sign Up</button>
+    </a>
+    <button onclick="showUserOptions()">Admin</button>
+    <button onclick="showDeskOptions()">Desk reservation</button>
+    <button onclick="showParkingOptions()">Parking reservation</button>
+    <button onclick="showMeetingRoomOptions()">Meeting Room reservation</button>
 </div>
 
 <div id="UserOptions" style="display: none;">
-  <h2>User</h2>
-  <a href="/CreateUser"><button>Create User</button></a>
-  <a href="/ReservationsPerUser"><button>Reservations Per User</button></a>
+    <h2>Admin</h2>
+    <a href="/ReservationsForJan">
+        <button>Reservations for January</button>
+    </a>
+    <a href="/ReservationsForFebPar">
+        <button>Reservations for February</button>
+    </a>
+    <a href="/ReservationsForMarchPar">
+        <button>Reservations for March</button>
+    </a>
+    <a href="/ReservationsPerUser">
+        <button>Reservations Per User</button>
+    </a>
+    <a href="/DeleteDeskReservation">
+        <button>Delete Desk reservation</button>
+    </a>
+    <a href="/DeleteParkingReservation">
+        <button>Delete a Parking reservation</button>
+    </a>
+    <a href="/DeleteMeetingRoomReservation">
+        <button>Delete a Meeting Room reservation</button>
+    </a>
 
 </div>
 
 
 <div id="deskOptions" style="display: none;">
-  <h2>Desk Options</h2>
-  <a href="/MakeDeskReservation"><button>Make a Desk reservation</button></a>
-  <a href="/DeleteDeskReservation"><button>Delete Desk reservation</button></a>
-  <a href="/DeskMonitorDetails"><button>Details for desks</button></a>
-  <a href="/AvailableDeskCurrentDate"><button>Available Desks for today</button></a>
+    <h2>Desk Options</h2>
+    <a href="/MakeDeskReservation">
+        <button>Make a Desk reservation</button>
+    </a>
+    <a href="/DeskMonitorDetails">
+        <button>Details for desks</button>
+    </a>
+    <a href="/AvailableDeskCurrentDate">
+        <button>Available Desks for today</button>
+    </a>
 
 </div>
 
 <div id="parkingOptions" style="display: none;">
-  <h2>Parking Options</h2>
-  <a href="/MakeParkingReservation"><button>Make a Parking reservation</button></a>
-  <a href="/DeleteParkingReservation"><button>Delete a Parking reservation</button></a>
-  <a href="/ParkingSpotDetails"><button>Parking Spot Details</button></a>
+    <h2>Parking Options</h2>
+    <a href="/MakeParkingReservation">
+        <button>Make a Parking reservation</button>
+    </a>
+
+    <a href="/ParkingSpotDetails">
+        <button>Parking Spot Details</button>
+    </a>
 
 </div>
 
 <div id="meetingOptions" style="display: none;">
-  <h2>Meeting Room Options</h2>
-  <a href="/MakeMeetingRoomReservation"><button>Make a Meeting Room reservation</button></a>
-  <a href="/DeleteMeetingRoomReservation"><button>Delete a Meeting Room reservation</button></a>
-  <a href="/MeetingRoomDetails"><button>Details for meeting rooms</button></a>
+    <h2>Meeting Room Options</h2>
+    <a href="/MakeMeetingRoomReservation">
+        <button>Make a Meeting Room reservation</button>
+    </a>
+    <a href="/MeetingRoomDetails">
+        <button>Details for meeting rooms</button>
+    </a>
 
 </div>
 
 <script>
 
-  function showUserOptions() {
-    document.getElementById("UserOptions").style.display = "block";
-    document.getElementById("deskOptions").style.display = "none";
-    document.getElementById("parkingOptions").style.display = "none";
-    document.getElementById("meetingOptions").style.display = "none";
+    function showUserOptions() {
+        document.getElementById("UserOptions").style.display = "block";
+        document.getElementById("deskOptions").style.display = "none";
+        document.getElementById("parkingOptions").style.display = "none";
+        document.getElementById("meetingOptions").style.display = "none";
 
-  }
-  function showDeskOptions() {
-    document.getElementById("UserOptions").style.display = "none";
-    document.getElementById("deskOptions").style.display = "block";
-    document.getElementById("parkingOptions").style.display = "none";
-    document.getElementById("meetingOptions").style.display = "none";
-  }
+    }
 
-  function showParkingOptions() {
-    document.getElementById("UserOptions").style.display = "none";
-    document.getElementById("deskOptions").style.display = "none";
-    document.getElementById("parkingOptions").style.display = "block";
-    document.getElementById("meetingOptions").style.display = "none";
-  }
+    function showDeskOptions() {
+        document.getElementById("UserOptions").style.display = "none";
+        document.getElementById("deskOptions").style.display = "block";
+        document.getElementById("parkingOptions").style.display = "none";
+        document.getElementById("meetingOptions").style.display = "none";
+    }
 
-  function showMeetingRoomOptions() {
-    document.getElementById("UserOptions").style.display = "none";
-    document.getElementById("deskOptions").style.display = "none";
-    document.getElementById("parkingOptions").style.display = "none";
-    document.getElementById("meetingOptions").style.display = "block";
-  }
+    function showParkingOptions() {
+        document.getElementById("UserOptions").style.display = "none";
+        document.getElementById("deskOptions").style.display = "none";
+        document.getElementById("parkingOptions").style.display = "block";
+        document.getElementById("meetingOptions").style.display = "none";
+    }
+
+    function showMeetingRoomOptions() {
+        document.getElementById("UserOptions").style.display = "none";
+        document.getElementById("deskOptions").style.display = "none";
+        document.getElementById("parkingOptions").style.display = "none";
+        document.getElementById("meetingOptions").style.display = "block";
+    }
 </script>
 
 </body>

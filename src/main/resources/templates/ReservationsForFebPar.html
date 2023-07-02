@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details for February 2023</title>
+</head>
+<body>
+<h1>Reservations For February 2023</h1>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Reservation Date</th>
+        <th>User ID</th>
+
+
+    </tr>
+    <tr th:each="users : ${febParDetails}">
+        <td th:text="${users.id}"></td>
+        <td th:text="${users.reservationday}"></td>
+        <td th:text="${users.userid}"></td>
+    </tr>
+</table>
+</body>
+</html>
